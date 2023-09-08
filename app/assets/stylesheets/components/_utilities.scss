@@ -1,0 +1,26 @@
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.max-width-650px {
+  max-width: 650px;
+}
+.page-min-height {
+  min-height: calc(100vh - 170px)
+}
+.font-size-12px {
+  font-size: 12px;
+}
+.font-size-16px {
+  font-size: 16px;
+}
+.text-cookie {
+  color: $cookie;
+  &:hover{
+    text-decoration: none;
+    color: darken($cookie, 35%);
+  }
+}
+.border-cookie {
+  border-color: $cookie;
+}
+

@@ -1,0 +1,12 @@
+.alert {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+.alert-info {
+  background: #32B796;
+}
+.alert-warning {
+  background: #EE5F5B;
+}

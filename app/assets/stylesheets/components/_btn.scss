@@ -4,10 +4,11 @@
   border-radius: 4px;
   background: black;
   transition: background 0.3s ease;
+  font-weight: bold;
 }
 
 .btn-flat:hover {
-  background: #4D04C4;
+  background: green;
   color: white;
   font-weight: bold;
 }

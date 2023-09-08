@@ -2,7 +2,6 @@
   <!-- Logo -->
   <a href="/" class="navbar-perso-brand">
     <%= image_tag "logo.png" %>
-    <%# <p>Lemurian Agency</p> %>
   </a>
   <div class="d-none d-md-block">
     <div class="d-flex align-items-center justify-content-between">
@@ -32,6 +31,8 @@
           <nav class= "d-flex flex-column">
             <%= link_to "Accueil", root_path, class: "navbar-link" %>
             <% if user_signed_in? %>
+              <%= link_to "Contact", contact_path, class: "navbar-link" %>
+              <%= link_to "Legal", legal_path, class: "navbar-link" %>
               <%= link_to "Se Déconnecter", destroy_user_session_path, class: "navbar-link", method: :delete %>
             <% else %>
               <%= link_to "Legal", legal_path, class: "navbar-link" %>

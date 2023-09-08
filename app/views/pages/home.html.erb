@@ -2,7 +2,7 @@
 <section>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dbtnehfrf/image/upload/v1686826779/test.jpg);">
     <div class="container">
-      <h1 class="banner_title">Création <span class="green--not"> & </span> <br> Développement web <br>  par <span class="green--not">Lemur Agency</span></h1>
+      <h1 class="banner_title">Création <span class="green--not"> & </span> <br> Développement web <br>  par <span class="green--not">Lemurian Agency</span></h1>
       <p class="banner_text">Je  suis Andy Ramaroson, un développeur web FullStack basée sur Bordeaux
         (N. Aquitaine, 33) et je réalise tous types de <span class="green"> logiciels </span>  et d'applications sur
         mesure en me basant sur des technologies web modernes. Je suis  <span class="green"> spécialisés </span> dans le langage ruby,
@@ -19,7 +19,247 @@
       <h2 class="block__title">Mon Expertise</h2>
       <p> Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de nos clients en solution numériques, en garantissant le respect de leurs règles métiers. </p>
     </div>
+
+
+    <%# Pannel action competence %>
+    <div class="row">
+      <div class="col-12 col-xl-2 margin-top-2 ">
+          <ul class="ul-none-decoration">
+              <li>
+                <input class="radio" id="radio-1" name="tabs" type="radio" onclick="selectPanel('one-panel','radio-1')">
+                <label class="tab" id="one-tab" for="radio-1">Developpement</label>
+              </li>
+              <li>
+                <input class="radio" id="radio-2" name="tabs" type="radio" onclick="selectPanel('two-panel','radio-2')">
+                <label class="tab" id="two-tab" for="radio-2">Hébergement</label>
+              </li>
+              <li>
+                <input class="radio" id="radio-3" name="tabs" type="radio" onclick="selectPanel('three-panel','radio-3')">
+                <label class="tab" id="three-tab" for="radio-3">Maintenance</label>
+              </li>
+          </ul>
+      </div>
+
+      <%# Block compétence 1 %>
+
+      <div class="col-12 col-xl-10">
+          <div class="panels" id="panels">
+              <div class="panel" id="one-panel" style="display: block;">
+                  <div class="row">
+                      <div class="col-12 col-lg-7">
+                          <div class="row p-0 p-xl-5">
+                              <div class="col-12">
+                                  <h3 class="fw-bold h4">Développement</h3>
+                                  <p class="mt-1 lead">Chez LEMURIAN, nous avons une passion pour les passions !</p>
+                                  <div class="row mt-2 text-center">
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-keyboard h4"></i></span>
+                                          <p class="p-small">On s'attache à comprendre le métier de notre client, pour définir le besoin exact.</p>
+                                      </div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-code h4"></i></span>
+                                          <p class="p-small">Puis on convient d'une solution qui s'accorde avec son avis, son budget.</p>
+                                      </div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-laptop-code h4"></i></span>
+                                          <p class="p-small">On revient constamment vers l'utilisateur final pour qu'il valide nos développements.</p>
+                                      </div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-code-branch h4"></i></span>
+                                          <p class="p-small">On livre une solution et on reste en contact constant avec notre client pour assurer sa satisfaction.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <%# Block compétence 1 image %>
+
+                      <div class="col-0 col-lg-5 mt-5">
+                          <img class="img-diapo" loading="lazy" src="https://www.kernl.fr/images/5.webp" alt="Developpement">
+                      </div>
+                  </div>            
+
+              <%# Block compétence 2 %>
+
+              <div class="panel" id="two-panel" style="display: none;">
+                  <div class="row ">
+                      <div class="col-12 col-lg-7">
+                          <div class="row p-0 p-xl-5">
+                              <div class="col-12">
+                                  <h3 class="fw-bold h4">Hébergement</h3>
+                                  <p class="mt-1 lead">Notre coeur de métier comporte aussi la mise en place du serveurs.</p>
+                                  <div class="row text-center">
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-window-restore h4"></i></span>
+                                          <p class="p-small">Pour accueillir nos propres solutions ou pour propulser les applications de nos clients.</p>
+                                      </div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-sitemap h4"></i></span>
+                                          <p class="p-small">La sécurité, la performance et la disponibilité sont nos priorités.</p>
+                                      </div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-terminal h4 "></i>
+                                          <p class="p-small">3 ans d'expérience dans la gestion et le déploiement de solutions d'hébergement.</p>
+                                      </span></div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-bug h4"></i></span>
+                                          <p class="p-small">Une veille constante pour se tenir informé des failles potentielles.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <%# Block compétence 2 image %>
+                      <div class="col-0 col-lg-5 mt-5">
+                          <img class="img-diapo img-radius" loading="lazy" src="https://www.kernl.fr/images/4.webp" alt="Hébergement">
+                      </div>
+                  </div>
+              </div>
+
+              <%# Block compétence 3 %>
+
+              <div class="panel" id="three-panel" style="display: none;">
+                  <div class="row ">
+                      <div class="col-12 col-lg-7">
+                          <div class="row p-0 p-xl-5 bg-white-transparent radius">
+                              <div class="col-12">
+                                  <h3 class="fw-bold h4">Maintenance</h3>
+                                  <p class="mt-1 lead">Maintenir aujourd'hui, pour mieux développer demain !</p>
+                                  <div class="row mt-2 text-center">
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-microchip h4"></i></span>
+                                          <p class="p-small">Tous les composants qu'on utilise sont maintenus et bénéficient des dernières mises à jour.</p>
+                                      </div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-user-secret h4"></i></span>
+                                          <p class="p-small">Une veille constante nous permet de rester à la pointe de la sécurité informatique.</p>
+                                      </div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-gears h4"></i>
+                                          <p class="p-small">Notre métier, c'est de garantir que tous vos services fonctionnent les uns avec les autres, à tout moment.</p>
+                                      </span></div>
+                                      <div class="col-6 mt-3 p-1 p-lg-3">
+                                          <span><i class="fa-solid fa-network-wired h4"></i></span>
+                                          <p class="p-small">Notre code est constamment versionné, archivé, sauvegardé, et le créateur d'une fonctionnalité est identifié.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <%# Block compétence 3 image %>
+                      <div class="col-0 col-lg-5 mt-5">
+                          <img class="img-diapo img-radius" loading="lazy" src="https://www.kernl.fr/images/mac.webp" alt="Maintenance">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="block__text">
+      <h2 class="block__title">Ils nous font confiance</h2>
+      <p> Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de nos clients en solution numériques, en garantissant le respect de leurs règles métiers. </p>
+    </div>
+
+    <div class="row margin-top-5">
+        <div class="col-12 col-xl-7">
+            <h2>La <span class="green">Conception </span></h2>
+            <p class="lead mt-4">Chacun des projets que nous réalisons est unique, alors nous travaillons en étroite collaboration avec notre client.</p>
+            <p class="lead mt-4">De manière itérative, nous implémentons des
+                fonctionnalités et le client nous fait un retour sur celles-ci. En plus des traditionnels
+                e-mails, des appels téléphoniques, des réunions visio, nous avons mis en place :
+            </p>
+
+            <ul class="ul-rond lead mt-4">
+                <li class="p-1">Un dépôt de code source Git administré à l’aide de <span class="blue">Gitlab</span>.</li>
+                <li class="p-1">Un système de tickets / commentaires pour interagir avec l'équipe.</li>
+                <li>Un environnement de développement, sur lequel travaillent nos développeurs, et testent leurs modifications avant de les présenter.</li>
+                <li>Un environnement bac à sable, pour que notre client puisse tester les fonctionnalités de l'application sans risque et nous faire un retour.</li>
+                <li>Un environnement de pré-production, pour tester une dernière fois l'intégralité de l'application, avec des données réelles.</li>
+                <li>Un environnement de production, stable et immaculé, pour accueillir votre outil dans sa version finale.</li>
+            </ul>
+            <div class="mt-5">
+                <a href="https://www.kernl.fr/methodologie" class="cta">
+                    <span>Notre méthodologie</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-0 col-xl-5">
+            <div class="coder">
+                <div class="illustration-editor">
+                    <div class="code-blocks">
+                        <div class="code code-html">
+                            <header>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"></path>
+                                </svg>
+                                <span class="h6">HTML</span>
+                                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"></path>
+                                </svg>
+                            </header>
+                            <div class="code-content">
+                                <code>
+                                  <span class="c-r">&lt;div</span> <span class="c-y">class</span><span class="c-w">=</span><span class="c-g">"rect"</span><span class="c-r">&gt;&lt;/div&gt;</span>
+                            </code></div><code>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="code code-css">
+                        <header>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"></path>
+                            </svg>
+                            <span class="h6">SCSS</span>
+                            <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"></path>
+                            </svg>
+                        </header>
+                        <div class="code-content">
+                            <code>
+                                <p class="line-1 p-small"><span class="c-y">.rect</span> <span>{</span>
+                                </p><br>
+                                <p class="line-2 p-small"><span class="c-p">background</span><span>:</span> <span class="c-y">linear-gradient</span>( </p><br>
+                                <p class="line-3 p-small"><span class="c-o">-119deg</span>,</p><br>
+                                <%# <p class="line-4 p-small"><span class="c-y">$gray</span> <span class="c-o">0%</span>,</p><br>
+                                <p class="line-5 p-small"><span class="c-y">$dark</span> <span class="c-o">100%</span>);}</p> %>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="code code-js">
+                        <header>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9999 6.675L13.1999 6.075C12.9999 5.975 12.8999 5.775 12.9999 5.675L13.8999 3.975C14.4999 2.775 13.1999 1.475 11.9999 2.075L10.2999 2.975C10.1999 3.075 9.9999 2.975 9.8999 2.775L9.2999 0.975C8.8999 -0.325 7.0999 -0.325 6.6999 0.975L6.0999 2.775C5.9999 2.975 5.7999 3.075 5.6999 2.975L3.9999 2.075C2.7999 1.475 1.4999 2.775 2.0999 3.975L2.9999 5.675C3.0999 5.775 2.9999 5.975 2.7999 6.075L0.999902 6.675C-0.300098 7.075 -0.300098 8.975 0.999902 9.375L2.7999 9.975C2.9999 9.975 3.0999 10.175 2.9999 10.275L2.0999 11.975C1.4999 13.175 2.7999 14.475 3.9999 13.875L5.6999 12.975C5.8999 12.875 6.0999 12.975 6.0999 13.175L6.6999 14.975C7.0999 16.275 8.9999 16.275 9.3999 14.975L9.9999 13.175C10.0999 12.975 10.2999 12.875 10.3999 12.975L12.0999 13.875C13.2999 14.475 14.5999 13.175 13.9999 11.975L12.9999 10.275C12.8999 10.075 12.9999 9.875 13.1999 9.875L14.9999 9.275C16.2999 8.875 16.2999 7.075 14.9999 6.675ZM7.9999 10.375C6.6999 10.375 5.5999 9.275 5.5999 7.975C5.5999 6.675 6.6999 5.575 7.9999 5.575C9.2999 5.575 10.3999 6.675 10.3999 7.975C10.3999 9.275 9.2999 10.375 7.9999 10.375Z" fill="#4C4F5A"></path>
+                            </svg>
+                            <span class="h6">JS</span>
+                            <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.7089 7.65105L14.8704 2.02908C15.1112 1.80937 15.2528 1.51212 15.2528 1.18902C15.2528 0.865913 15.1112 0.56866 14.8704 0.348951C14.6296 0.129241 14.3038 0 13.9497 0C13.5956 0 13.2698 0.129241 13.029 0.348951L7.75989 5.1567L2.49077 0.348951C2.24998 0.129241 1.9242 0 1.57009 0C1.21598 0 0.890202 0.129241 0.649409 0.336026C0.380287 0.568659 0.252808 0.878837 0.252808 1.18902C0.252808 1.48627 0.380286 1.78352 0.621079 2.02908C2.23581 3.51535 6.42844 7.3538 6.71173 7.6252L6.74006 7.65105C7.24998 8.11632 8.19898 8.11632 8.7089 7.65105Z" fill="#4C4F5A"></path>
+                            </svg>
+                        </header>
+                        <div class="code-content">
+                            <code>
+                                <span class="c-y">var</span> <span class="c-b">colors</span> =
+                                [<span class="c-g">“#74B087”</span>, <span class="c-g">“#DE7300”</span>, <span class="c-g">“#74B087”</span>];<br><br>
+                                <span class="c-c">// Do the thing</span><br>
+                                <span class="c-y">function</span> <span class="c-b">animate</span>() {}
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+
   </div>
+</div>
+        
+                                
 
 
   

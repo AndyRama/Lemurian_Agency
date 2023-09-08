@@ -43,11 +43,62 @@
   margin-top: 20px !important;
   margin-bottom: 20px;
   height: 200px;
-  width: 900px;
+  // width: 900px;
   font-family: Poppins,sans-serif;
   font-weight: 400 !important;
   font-size: 1.375rem;
   line-height: 32px;
 }
 
+.lead {
+  font-weight: 400 ! important;
+  font-size: 1.375rem;
+  line-height: 32px;
+}
 
+.img-diapo {
+  height: 400px !important;
+  width: 600px !important;
+}
+
+.ul-none-decoration {
+  list-style: none;  
+  margin-top: 100px;
+}
+
+ul {
+  margin-top: 1rem;
+  padding-left: 2rem;
+}
+
+.code-html {
+  background-color: black;
+  height: 200px;
+  width: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.code-css {
+  background-color: black;
+  height: 200px;
+  width: 400px;
+  margin: 50px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.code-js {
+  background-color: black;
+  height: 200px;
+  width: 400px;
+  // margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 20px 10px;
+}
+
+.code .code-content {
+  color: #fff;
+}

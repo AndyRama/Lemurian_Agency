@@ -1,22 +1,16 @@
-// Specific CSS for your home-page
 .banner {
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
-  padding: 250px 0;
-  margin-top: 80px;
-  position: relative;
+  padding: 150px 0;
+  // width: 50%;
 }
 
 .banner h1 {
-  margin: 0;
-  color: black;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 64pX;
-  font-weight: bold;
-  position: absolute;
-  top: -10%;
-  left: 40%;
-  opacity: 0.6;
+  font-family: poppins;
+  font-size: 52px;
+  width: auto;
+  font-weight: 500;
+  margin-bottom: 50px;
 }
 
 .banner p {
@@ -24,8 +18,14 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 50px;
 }
 
-.container-devise {
-  margin-top: 30px;
+.banner-text {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  width: 450px;
+  text-align: justify;
 }

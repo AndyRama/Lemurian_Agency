@@ -37,6 +37,7 @@
   cursor: pointer;
   text-decoration: none;
 }
+
 .navbar-perso-link:hover {
   color: #4aa79f;
   text-decoration: none;
@@ -53,20 +54,24 @@
     font-size: 20px;
   }
 }
+
 .navbar-link:hover {
   color: #da552f;
   text-decoration: none;
 }
+
 .navbar-link:visited {
   outline: 0;
-  color: white;
+  color: black;
   text-decoration: none;
 }
+
 .navbar-link:focus {
   color: white;
   outline: 0;
   text-decoration: none;
 }
+
 .navbar-dropdown {
   flex: 0 1 auto;
   cursor: pointer;
@@ -74,10 +79,12 @@
   text-decoration: none;
   color: white;
 }
+
 .navbar-dropdown-menu {
   margin-top: 15px;
   border-color: #E6E6E6;
 }
+
 .navbar-dropdown-menu > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
@@ -86,10 +93,12 @@
   padding: 0px 15px;
   display: flex;
 }
+
 .navbar-dropdown-menu > a:hover {
   background: transparent !important;
   color: black !important;
 }
+
 .navbar-dropdown-menu:before {
   content: ' ';
   height: 10px;
@@ -135,14 +144,14 @@
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   margin-top: 22.5px;
-  background-color: white;
+  background-color: black;
 }
 
 #toggle:checked + .hamburger .meat {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin-top: -2px;
-  background-color: white;
+  background-color: black;
 }
 
 #toggle:checked + .hamburger .bottom {
@@ -152,17 +161,16 @@
 
 #toggle:checked + .hamburger + .nav {
   top: 0;
-  background-color: rgba(74, 167, 159,0.9);
+  background-color: rgba(245, 248, 247, 0.9);
 }
 
 /* Menu Styling */
 .nav {
   z-index: 1;
   position: fixed;
-  width: 100%;
+  width: 25%;
   height: 100%;
   top: 21px;
-  left: 0;
   right: 0;
   bottom: 0;
   overflow: hidden;

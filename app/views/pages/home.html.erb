@@ -1,22 +1,15 @@
 <%= content_for :meta_title, "Yourdomain - Your Meta" %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1167355/pexels-photo-1167355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dbtnehfrf/image/upload/v1686826779/test.jpg);">
   <div class="container">
-    <h1>Banner</h1>
+    <h1 class="banner-title">Création & <br> Développement <br> web par Lemurian Agency</h1>
+    <p class="banner-text">Je  suis Andy Ramaroson, un développeur web FullStack basée sur Bordeaux
+       (N. Aquitaine, 33) et je réalise tous types de logiciels et d'applications sur mesure en me 
+       basant sur des technologies web modernes. Je suis spécialisés sur le langage ruby, et plus 
+       précisément le framework Ruby on rails.
+    </p>
+
+    <%= link_to "Me contacter", "/legal", class: "btn btn-flat" %>
+    
   </div>
-</div>
-
-<div class="container page-min-height">
-  <h2>Example btn Stripe</h2>
-  <article> 
-  <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1Mppv7KKtQnf8aE4fQqj2e0o"
-  publishable-key="pk_test_51IUaE2KKtQnf8aE42pXFWBsteuriJNV5X3TzjLXkhQcwuzGUki2YYlorCXkjn4t5XtP2psmCr3Df5tBvRsp1ymFz00A1tQ6e80"
->
-</stripe-buy-button>
-   </article>
-  <aside>  </aside>
 </div>

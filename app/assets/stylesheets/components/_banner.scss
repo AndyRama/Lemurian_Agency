@@ -31,9 +31,9 @@
   font-size: 52px;
   width: auto;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 50px !important;
 
-  @include media-breakpoint-down(xl) { 
+  @include media-breakpoint-down(lg) { 
     font-size: 48px !important;
     margin-bottom: 0px;
   }
@@ -48,19 +48,22 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  margin-bottom: 50px; 
   font-family: Poppins,sans-serif;
 
   @include media-breakpoint-down(xl) { 
     font-size: 16px !important;
     margin-bottom: 0px;
   }
+  
+  @include media-breakpoint-down(lg) { 
+    color: black;
+    width: 530px;
+    margin-bottom: 0;
+  }
 
   @include media-breakpoint-down(sm) { 
     font-size: 16px !important;
-    color: black;
     width: 320px;
-    margin: 14px;
   }
 }
 

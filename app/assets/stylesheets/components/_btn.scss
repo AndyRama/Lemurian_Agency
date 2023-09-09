@@ -7,7 +7,15 @@
   font-weight: bold;
 
   @include media-breakpoint-down(xl) { 
-    margin-top: 30px;
+    margin-top: 50px;
+  }
+
+  @include media-breakpoint-down(lg) { 
+    margin-left: 420px;
+  }
+
+  @include media-breakpoint-down(sm) { 
+    margin-left: 200px;
   }
 }
 

@@ -2,9 +2,22 @@
   background-size: 100%;
   background-position: center;
   padding: 150px 0;
+
+  @include media-breakpoint-down(sm) { 
+    background-size: 0%;
+  }
 }
 
+.container-flex {
+  // width: 500px;
+  // height: 500px;
 
+  //   background-image: none !important;
+  // // }
+  // display: flex;
+  // flex-direction: column;
+
+}
 
 .banner h1 , .block__title {
   font-family: poppins;

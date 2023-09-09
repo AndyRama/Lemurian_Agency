@@ -7,3 +7,76 @@
     font-size: 12px;
   }
 }
+
+.container {
+  @include media-breakpoint-down(lg) { 
+    width: max-content !important;
+  }
+}
+
+.banner {
+  background-size: 100%;
+  background-position: center;
+  padding: 150px 0;
+
+  @include media-breakpoint-down(lg) { 
+    background-size: 0%;
+    padding: 100px 0;
+  }
+}
+
+.banner h1 ,
+.block__title {
+  font-family: poppins;
+  font-size: 52px;
+  width: auto;
+  font-weight: 500;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-down(xl) { 
+    font-size: 48px !important;
+    margin-bottom: 0px;
+  }
+
+  @include media-breakpoint-down(sm) { 
+    font-size: 36px !important;
+  }
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 50px; 
+  font-family: Poppins,sans-serif;
+
+  @include media-breakpoint-down(xl) { 
+    font-size: 16px !important;
+    margin-bottom: 0px;
+  }
+
+  @include media-breakpoint-down(sm) { 
+    font-size: 16px !important;
+    color: black;
+    width: 320px;
+    margin: 14px;
+  }
+}
+
+.banner_text {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  width: 450px;
+  text-align: justify;  
+}
+
+.green {
+  color: green !important;
+}
+
+.green--not {
+  color: green !important;
+}

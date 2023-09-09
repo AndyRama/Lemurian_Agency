@@ -11,6 +11,10 @@
   position: fixed;
   z-index: 600;
   width: 100%;
+
+  @include media-breakpoint-down(sm) { 
+    padding: 0px 0px;
+  }
 }
 
 /* Logo */
@@ -174,6 +178,10 @@
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+
+  @include media-breakpoint-down(lg) { 
+    width: 50%;
+  }
 
   @include media-breakpoint-down(sm) { 
     width: 100%;

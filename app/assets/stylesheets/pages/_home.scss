@@ -1,63 +1,7 @@
-.banner {
-  background-size: 100%;
-  background-position: center;
-  padding: 150px 0;
-
-  @include media-breakpoint-down(sm) { 
-    background-size: 0%;
-  }
-}
-
-.container-flex {
-  // width: 500px;
-  // height: 500px;
-
-  //   background-image: none !important;
-  // // }
-  // display: flex;
-  // flex-direction: column;
-
-}
-
-.banner h1 , .block__title {
-  font-family: poppins;
-  font-size: 52px;
-  width: auto;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  margin-bottom: 50px; 
-  font-family: Poppins,sans-serif;
-}
-
-.banner_text {
-  text-decoration: none;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  width: 450px;
-  text-align: justify;  
-}
-
-.green {
-  color: green !important;
-}
-
-.green--not {
-  color: green !important;
-}
-
 .block__text {
   margin-top: 20px !important;
   margin-bottom: 20px;
   height: 200px;
-  // width: 900px;
   font-family: Poppins,sans-serif;
   font-weight: 400 !important;
   font-size: 1.375rem;
@@ -107,7 +51,6 @@ ul {
   background-color: black;
   height: 200px;
   width: 400px;
-  // margin: 20px;
   border-radius: 10px;
   padding: 10px;
   margin: 0 20px 10px;

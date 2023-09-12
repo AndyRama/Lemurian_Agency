@@ -5,9 +5,9 @@
   background: black;
   transition: background 0.3s ease;
   font-weight: bold;
+  margin-top: 50px!important;
 
   @include media-breakpoint-down(xl) { 
-    margin-top: 50px;
   }
 
   @include media-breakpoint-down(lg) { 

@@ -7,7 +7,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <%#= link_to "Home", "#", class: "navbar-perso-item navbar-perso-link" %>
       <%#= link_to "About me", "/", class: "navbar-perso-item navbar-perso-link" %>
-      <%#= link_to "Contact", "/", class: "navbar-perso-item navbar-perso-link" %>
+      <%# <%= link_to "Contact", "/", class: "navbar-perso-item navbar-perso-link" %> 
       <%#= link_to "Write", "/", class: "navbar-perso-item navbar-perso-link" %>
       <%# if user_signed_in? %>
         <%#= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete , class: "navbar-perso-item navbar-perso-link"%>
@@ -35,6 +35,7 @@
               <%= link_to "Legal", legal_path, class: "navbar-link" %>
               <%= link_to "Se Déconnecter", destroy_user_session_path, class: "navbar-link", method: :delete %>
             <% else %>
+              <%= link_to "Contact", contact_path, class: "navbar-link" %>
               <%= link_to "Legal", legal_path, class: "navbar-link" %>
               <%= link_to "Créer un Compte", new_user_registration_path, class: "navbar-link" %>
               <%= link_to "Se Connecter", new_user_session_path,  class: "navbar-link" %>

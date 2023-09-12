@@ -48,3 +48,29 @@ h2 {
   background-size: cover;
   object-fit: cover;
 }
+
+.btn-black {
+  background: #24252d;
+  border: 1px solid #24252d;
+  border-radius: 6px;
+  color: #fff !important;
+  color: #24252d;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  height: 70px;
+  letter-spacing: -.015em;
+  line-height: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: background-color .1s,border ease-in-out,transform .1s,box-shadow 5ms,border-color .25s;
+  white-space: nowrap;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 14px !important;
+  height: 42px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  text-decoration: none;
+}

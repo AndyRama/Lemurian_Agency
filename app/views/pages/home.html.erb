@@ -1,17 +1,31 @@
 <%= content_for :meta_title, "Yourdomain - Your Meta" %>
 
 <section >
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dbtnehfrf/image/upload/v1686826779/test.jpg);">
-    <div class="container">
-      <h1 class="banner_title">Création <span class="green--not"> & </span> <br> Développement web <br>  par <span class="green--not">Lemurian Agency</span></h1>
-      <p class="banner_text">Je  suis Andy Ramaroson, un développeur web FullStack basée sur Bordeaux
-        (N. Aquitaine, 33) et je réalise tous types de <span class="green"> logiciels </span>  et d'applications sur
-        mesure en me basant sur des technologies web modernes. Je suis  <span class="green"> spécialisés </span> dans le langage ruby,
-        et plus précisément le framework  <span class="green"> Ruby on Rails </span>.
-      </p> 
-
-      <%= link_to "contact", "/contact", class: "btn btn-flat" %>
-      
+  <%= render 'shared/banner' %>
+ 
+  <div class="container margin-top-3 mb-2">
+    <div class="row mt-5">
+      <div class="col-md-10 mt-5 mb-5">
+        <h2>Expertise</h2>
+        <p class="content mt-4">Je réalise depuis 3 ans des outils sur-mesure à destination d'entreprises de toutes tailles. 
+          Je transforme chaque besoin de nos clients en solution numériques, en garantissant le respect de leurs
+          règles métiers.
+        </p>
+      </div>
     </div>
-  </div>     
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-2 mt-2">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    
 </section>

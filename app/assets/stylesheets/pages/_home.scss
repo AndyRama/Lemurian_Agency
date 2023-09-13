@@ -55,9 +55,13 @@ h2 {
   }
 }
 
-.p-small{
-  font-size: 12px !important;
-  line-height: 16px;
+.p-small {
+  font-size: 18px;
+
+  @include media-breakpoint-down(sm) { 
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .clients-img {

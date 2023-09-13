@@ -4,8 +4,11 @@
   <%= render 'shared/banner' %>
  
   <div class="container margin-top-3 mb-2">
+  
     <div class="row mt-5">
+      <div class="col-0 col-xl-2"></div>
       <div class="col-md-10 mt-5 mb-5">
+
         <h2>Expertise</h2>
         <p class="content mt-4">Je réalise depuis 3 ans des outils sur-mesure à destination d'entreprises de toutes tailles. 
           Je transforme chaque besoin de nos clients en solution numériques, en garantissant le respect de leurs
@@ -28,6 +31,7 @@
 
   <div class="container">
     <div class="row ">
+      <%# <div class="col-0 col-xl-2"></div> %>
       <div class="col-md-10 mt-5 mb-5">
         <h2 class="confiance">Ils m'ont fait confiance</h2>
         <p class="content"> Je réalise au quotidien des projets pour des startups, PME, éditeurs de logiciels
@@ -40,6 +44,7 @@
 
   <div class="container">
     <div class="row mt-5">
+      <%# <div class="col-0 col-xl-2"></div> %>
       <div class="col-12 col-xl-7">
         <h2>Un <span class="green"> artisan </span> du web</h2>
         <p class="content mt-4">Chacun des projets que je réalise est unique, alors je travaille en étroite collaboration avec le client.</p>
@@ -47,7 +52,9 @@
           En plus des traditionnels e-mails, des appels téléphoniques, des réunions visio, nous avons mis en place :
         </p>
         <ul>
-          <li class="p-1">Un dépôt de code source <span class="green"> git </span>.</li>
+          <li class="p-1">Un dépôt de code source 
+            <span class="green"> git </span>.
+          </li>
           <li class="p-1">Un environnement de développement, sur lequel travaillent nos développeurs,
             et testent leurs modifications avant de les présenter.
           </li>
@@ -63,29 +70,52 @@
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="container margin-top-3 mb-2">
-    <div class="row mt-3">
-      <div class="col-md-10 mt-2 mb-5">
-        <h2>Mes  <span class="green">clients</span></h2>
-        <p class="content mt-4">Je me suis spécialisé dans la création d'applications web sur-mesure, destinées à optimiser le quotidien
-         s de nos clients. Le gain de temps, l'efficacité et la personnalisation sont les maîtres mots ! 
-        </p>
+    
+    <div class="col-10">  
+      <div id="filter-cont">
+        <div class="filter">
+          <span class="filter-icon">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+          <a class="filter-btn" href="/methodologie"> Methodologie </a>
+        </div>
       </div>
     </div>
+
+    <div class="container margin-top-3 mb-2">
+      <div class="row mt-3">
+        <%# <div class="col-0 col-xl-2"></div> %>
+        <div class="col-md-10 mt-2 mb-5">
+          <h2>Mes  <span class="green">projets</span></h2>
+          <p class="content mt-4">Je me suis spécialisé dans la création d'applications web sur-mesure, destinées à optimiser le quotidien
+          s de nos clients. Le gain de temps, l'efficacité et la personnalisation sont les maîtres mots ! 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-10">  
+      <div id="filter-cont">
+        <div class="filter">
+          <span class="filter-icon">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+          <a class="filter-btn" href="/clients"> Projets </a>
+        </div>
+      </div>
   </div>
 
   <div class="container">
     <div class="row justify-content-center p-0 p-sm-4">
       <div class="col-12 col-sm-12 text-center p-3 mb-5">
-        <h3 class="blue fw-bold mt-2"><span class="green">Vous souhaitez en <br> savoir plus ?</span></h3>
+        <h3 class="blue fw-bold mt-2"><span class="green">Vous souhaitez en savoir plus ?</span></h3>
         <p class="content">Que ce soit pour une question, une demande de devis : n'hésitez pas à me contacter
-          via notre formulaire de contact. On se fera un plaisir de revenir vers vous pour en discuter ensemble.</p>
-      <div class=" text-center h6">
-        <%# <i class="fa-solid fa-paper-plane"></i>           %>
-        <%= link_to " Discutons-en !", "/contact", class: "btn-black" %> 
-      </div>
+          via notre formulaire de contact. On se fera un plaisir de revenir vers vous pour en discuter ensemble.
+        </p>
+        <div class=" text-center h6">
+          <%# <i class="fa-solid fa-paper-plane"></i>           %>
+          <%= link_to " Discutons-en !", "/contact", class: "btn-black" %> 
+        </div>
       </div>
     </div>
   </div>

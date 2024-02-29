@@ -34,7 +34,8 @@
     ".next/types/**/*.ts",
     "__tests__/pages/page.test.js",
     "app/components/Navigation.js",
-    "__tests__/components/Navigation.test.jsx"
+    "__tests__/components/Navigation.test.tsx",
+    "__tests__/pages/page.test.jsx"
   ],
   "exclude": [
     "node_modules"

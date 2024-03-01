@@ -106,22 +106,22 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                 <Link
                   href={heroContent.intro.btn.href}
                   className="transistion-all duration-300 ease-in-out text-[11.5px]
-                    tracking-[2px] font-bold uppercase bg-orange-600 py-4 px-5
-                    rounded text-white inline-block hover:bg-white hover:text-orange-600
+                    tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
+                    rounded text-white inline-block hover:bg-white hover:text-orange-400
                     hover:shadow-2xl mb-5 mr-5"
                 >
-                  {heroContent.intro.btn.label}
+                  {heroContent.intro.btn1.label}
                 </Link>
 
                 {/* btn - right  */}
                 <Link
                   href={heroContent.intro.btn1.href}
                   className="transistion-all duration-300 ease-in-out text-[11.5px]
-                    tracking-[2px] font-bold uppercase bg-orange-600 py-4 px-5
-                    rounded text-white inline-block hover:bg-white hover:text-orange-600
+                    tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
+                    rounded text-white inline-block hover:bg-white hover:text-orange-400
                     hover:shadow-2xl mb-5"
                 >
-                  {heroContent.intro.btn1.label}
+                  {heroContent.intro.btn.label}
                 </Link>
               </motion.div>
             )}
@@ -129,7 +129,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
           {/* Image right */}
 
-          <div className="lg:w-12/12 relative lg:-mt-140 mb-8">
+          <div className="lg:w-12/12 relative lg:-mt-140 mb-8 ">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{
@@ -151,31 +151,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                 alt="hero image desktop"
               />
             </motion.div>
-
-            {/* Image2 right */}
-
-            {/* <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-                transition: {
-                  delai: 0.4,
-                  duration: 0.5,
-                },
-              }}
-              viewport={{ once: true }}
-              style={{ y: imgScroll2 }}
-              className="absolute bottom-0 lg:bottom-[100px] -left-[80px] z-[1] invisible md:visible "
-            >
-              <Image
-                src="/images/dots.svg"
-                width={200}
-                height={200}
-                alt="Dots orange background image "
-                className="w-64 "
-              />
-            </motion.div> */}
           </div>
         </div>
       </div>

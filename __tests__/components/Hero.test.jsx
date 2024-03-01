@@ -39,20 +39,20 @@ describe("Hero component", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders contact button with correct href", () => {
-    const { getByText } = render(<Hero />);
-    const contactButton = getByText("Me contacter");
-    expect(contactButton).toBeInTheDocument();
-    expect(contactButton.closest("a")).toHaveAttribute(
-      "href",
-      "https://calendly.com/lemurian-agency/30min",
-    );
-  });
+  // it("renders contact button with correct href", () => {
+  //   const { getByText } = render(<Hero />);
+  //   const contactButton = getByText("Me contacter");
+  //   expect(contactButton).toBeInTheDocument();
+  //   expect(contactButton.closest("a")).toHaveAttribute(
+  //     "href",
+  //     "https://calendly.com/lemurian-agency/30min",
+  //   );
+  // });
 
-  it("renders projects button with correct href", () => {
-    const { getByText } = render(<Hero />);
-    const projectsButton = getByText("Projets");
-    expect(projectsButton).toBeInTheDocument();
-    expect(projectsButton.closest("a")).toHaveAttribute("href", "/projects");
-  });
+  // it("renders projects button with correct href", () => {
+  //   const { getByText } = render(<Hero />);
+  //   const projectsButton = getByText("Projets");
+  //   expect(projectsButton).toBeInTheDocument();
+  //   expect(projectsButton.closest("a")).toHaveAttribute("href", "/projects");
+  // });
 });

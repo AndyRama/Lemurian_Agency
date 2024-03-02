@@ -11,6 +11,7 @@ interface CardDescriptionContent {
   };
   content: {
     img: string;
+    title: string;
     description: string;
     description1: string;
   };
@@ -27,16 +28,16 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
     offset: ["start end", "end start"],
   });
 
-  const img1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
-  const img2 = useTransform(scrollYProgress, [0, 1], ["100%", "100%"]);
+  const img1 = useTransform(scrollYProgress, [0, 1], ["20%", "-10%"]);
 
   const cardDescriptionContent: CardDescriptionContent = {
     heading: {
       title: "Qui suis-je !",
-      subTitle: "À propos",
+      subTitle: "À propos de moi",
     },
     content: {
       img: "/images/andy.png",
+      title: "Developpeur",
       description:
         "Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de mes clients en solution web, en garantissant le respect de leurs règles métiers.",
       description1:
@@ -87,14 +88,14 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
           )}
         </div>
 
-        {/* cardDescription - center - Card Image */}
+        {/* cardDescription - Left - Card Image */}
         <div className="lg: flex justify-center">
           <div className="lg:w-8/12 lg:flex gap-20 items-center">
             <div className="mb-7 lg:mb-0 lg:w-6/12 lg:order-2 relative">
               <motion.div style={{ y: img1 }} className="z-[2] relative">
                 <Image
                   src={cardDescriptionContent.content.img}
-                  className="object-cover !w-full !h-[600] lg:max-w-2xl object-center"
+                  className="object-cover !w-full !h-[400] lg:max-w-2xl object-center"
                   alt="Andy profile"
                   width={200}
                   height={200}
@@ -102,9 +103,26 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
               </motion.div>
             </div>
 
-            {/* cardDescription - center - title */}
+            {/* cardDescription - Right - title */}
             <div className="lg:w-6/12">
               <motion.h3
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 0.2,
+                    duration: 0.5,
+                  },
+                }}
+                viewport={{ once: true }}
+                className="text-4xl mb-7 text-gray-800"
+              >
+                {cardDescriptionContent.content.title}
+              </motion.h3>
+
+              {/* cardDescription - Right - bloc text */}
+              <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{
                   opacity: 1,
@@ -118,9 +136,10 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
                 className="text-xl mb-7 text-gray-800"
               >
                 {cardDescriptionContent.content.description}
-              </motion.h3>
+              </motion.p>
 
-              <motion.h3
+              {/* cardDescription - Right - bloc text */}
+              <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{
                   opacity: 1,
@@ -134,7 +153,7 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
                 className="text-xl mb-7 text-gray-800"
               >
                 {cardDescriptionContent.content.description1}
-              </motion.h3>
+              </motion.p>
             </div>
           </div>
         </div>

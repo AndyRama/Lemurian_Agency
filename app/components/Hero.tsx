@@ -11,7 +11,7 @@ interface HeroProps {
 const heroContent = {
   intro: {
     subTitle: "Bienvenue",
-    title: "Lemurian Agency",
+    title: "Création & developpement avec Lemurian Agency",
     description:
       "Je suis Andy Ramaroson, un développeur FullStack JS basée sur Bordeaux (N. Aquitaine, 33) et je réalise tous types de logiciels et d'applications sur mesure en me basant sur des technologies web modernes. Je suis spécialisé sur le langage  JavaScript avec le framework React & NextJs.",
     btn: {

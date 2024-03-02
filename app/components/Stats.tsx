@@ -55,14 +55,14 @@ const statContent: StatContent = {
     image: "/images/next-blog-article.jpg",
     cta: {
       cta_href: "https://calendly.com/lemurian-agency/30min",
-      cta_label: "Discutons",
+      cta_label: "Discutons-en !",
     },
   },
 };
 
 const Stats: React.FC<StatsProps> = ({ className }) => {
   return (
-    <section className="pt-0 md:pt-32 pb-10 bg-white">
+    <section className="pt-0 pb-10 bg-white">
       <div className="container px-4 mx-auto">
         <div className="lg:flex justify-between items-center space-x-0 ">
           <div className="w-full lg:w-8/12 mb-20 lg:mb-0">

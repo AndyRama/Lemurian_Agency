@@ -116,7 +116,7 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
                   },
                 }}
                 viewport={{ once: true }}
-                className="text-4xl mb-7 text-gray-800"
+                className="text-2xl mb-7 text-gray-800"
               >
                 {cardDescriptionContent.content.title}
               </motion.h3>

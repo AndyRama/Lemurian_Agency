@@ -62,7 +62,7 @@ const statContent: StatContent = {
 
 const Stats: React.FC<StatsProps> = ({ className }) => {
   return (
-    <section className="pt-0 pb-10 bg-white">
+    <section className="pt-24 pb-0 bg-white">
       <div className="container px-4 mx-auto">
         <div className="lg:flex justify-between items-center space-x-0 ">
           <div className="w-full lg:w-8/12 mb-20 lg:mb-0">
@@ -105,9 +105,6 @@ const Stats: React.FC<StatsProps> = ({ className }) => {
                     href={"https://calendly.com/lemurian-agency/30min"}
                   >
                     <span>{statContent.getStarted.cta.cta_label}</span>
-                    {/* <span className="w-6 h-6 rounded-full bg-primary text-white inline-flex items-center justify-center">
-                      <BiChevronRight className="text-lg " />
-                    </span> */}
                   </Link>
                 </Link>
               )}

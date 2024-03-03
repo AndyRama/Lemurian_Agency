@@ -36,7 +36,7 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
       subTitle: "À propos de moi",
     },
     content: {
-      img: "/images/andy.png",
+      img: "/images/maquette.jpg",
       title: "Developpeur",
       description:
         "Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de mes clients en solution web, en garantissant le respect de leurs règles métiers.",

@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import CardDescription from "./components/CardDescription";
 import Stats from "./components/Stats";
 import RecentProject from "./components/RecentProject";
+import RecentBlog from "./components/RecentBlog";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <CardDescription className="md:pt-22 lg-pb:80" />
       <RecentProject className="py-6 lg:py-32" />
       <Stats />
+      <RecentBlog />
     </>
   );
 }

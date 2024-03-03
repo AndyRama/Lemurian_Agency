@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Link from "next/link";
 
 interface Swiper {
   swiper: any;
@@ -22,6 +23,9 @@ interface RecentProjectContent {
     title: string;
     subTitle: string;
   };
+  main: {
+    title: string;
+  };
   recentProjects: RecentProject[];
 }
 
@@ -32,6 +36,7 @@ interface RecentProject {
   role: string;
   years: string;
   quote: string;
+  type: string;
 }
 
 const recentProjectContent: RecentProjectContent = {
@@ -39,11 +44,15 @@ const recentProjectContent: RecentProjectContent = {
     title: "Les Projets",
     subTitle: "Mes experiences",
   },
+  main: {
+    title: "Les Projets",
+  },
   recentProjects: [
     {
       img: "/images/desktop.jpg",
       title: "Unlcoaching.com",
-      years: " Fev. 2024",
+      years: "Fev. 2024",
+      type: "Création du site",
       name: "Jeremy Prat",
       role: "Coach Sportif",
       quote:
@@ -53,6 +62,7 @@ const recentProjectContent: RecentProjectContent = {
       img: "/images/desktop.jpg",
       title: "Fille-de-la-grace.com",
       years: " Mars 2024",
+      type: "Refonte du site",
       name: "Fara Rabefary",
       role: "Designe interieur",
       quote:
@@ -62,6 +72,7 @@ const recentProjectContent: RecentProjectContent = {
       img: "/images/desktop.jpg",
       title: "VanilleB2B.com",
       years: " Mars 2024",
+      type: "Refonte du site",
       name: "Honoré Rabefary",
       role: "Landscape Architect",
       quote:
@@ -71,6 +82,7 @@ const recentProjectContent: RecentProjectContent = {
       img: "/images/desktop.jpg",
       title: "MarketPlace.com",
       years: " Avr. 2024",
+      type: "Création du site",
       name: "Fara Rabefary",
       role: "Designe interieur",
       quote:
@@ -78,8 +90,9 @@ const recentProjectContent: RecentProjectContent = {
     },
     {
       img: "/images/desktop.jpg",
-      title: "Unlcoaching.app",
+      title: "app.Unlcoaching.com",
       years: " Sept. 2024",
+      type: "Création du site ",
       name: "Jeremy Prat",
       role: "Coach Sportif",
       quote:
@@ -89,6 +102,7 @@ const recentProjectContent: RecentProjectContent = {
       img: "/images/desktop.jpg",
       title: "Lemurian-agency.com",
       years: "Fev. 2024",
+      type: "Création du site",
       name: "Andy Ramaroson",
       role: "Développeur Fullstack Js",
       quote:
@@ -128,7 +142,7 @@ const RecentProject: React.FC<RecentProjectProps> = ({ className }) => {
         <div className="flex justify-center">
           <div className="w-full md:w-8/12 flex gap-0 items-center">
             <div className="text-center w-auto md:w-screen max-w-full md:max-w-xl mx-auto">
-              {recentProjectContent.heading.subTitle && (
+            {recentProjectContent.heading.subTitle && (
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{
@@ -205,16 +219,18 @@ const RecentProject: React.FC<RecentProjectProps> = ({ className }) => {
                           <h2 className=" text-2xl text-orange-400 block">
                             {recentProject.title}
                           </h2>
-                          <p className="mb-5">{recentProject.years}</p>
-
+                          <div className="flex space-x-3 text-sm">
+                            <span>{recentProject.type}</span>
+                            <span>&mdash;</span>
+                            <p className="mb-5">{recentProject.years}</p>
+                          </div>
                           <blockquote className="text-lg mb-5">
                             {recentProject.quote}
                           </blockquote>
-                          <div className="flex space-x-3 text-sm">
+                          <p>
                             <strong>{recentProject.name}</strong>
-                            <span>&mdash;</span>
-                            <span>{recentProject.role}</span>
-                          </div>
+                          </p>
+                          <p>{recentProject.role}</p>
                         </div>
                       </div>
                     </div>

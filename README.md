@@ -1,11 +1,11 @@
 # Lemurian Agency 🇫🇷
 
-[pre-prod](lemurian-agency.vercel.app)
-[production](service.andyramaroson.com)
+[Pre-prod](lemurian-agency.vercel.app) <br/> 
+[Production](service.andyramaroson.com)
 
 ------------------------------------------------
 
-Projet Création de site web Développeravec NextJs | React  
+Projet Création de site web Développer avec NextJs | React  
 
 **Presentation du service**
 
@@ -74,7 +74,7 @@ Création du site avec une stack complète en JavaScript avec Nextjs et React.
 - Le lancer sur le port 3000 : `npm run dev`
 - Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans votre navigateur.
 
-## fonctionnalité
+## Fonctionnalité
 
 - [x] Construire le déploiement de l'application
 
@@ -82,8 +82,8 @@ Création du site avec une stack complète en JavaScript avec Nextjs et React.
 
  # Lemurian Agency 🇬🇧
 
-[pre-prod](lemurian-agency.vercel.app)
-[production](service.andyramaroson.com)
+[Pre-prod](lemurian-agency.vercel.app)
+[Production](service.andyramaroson.com)
 
 ------------------------------------------------
 
@@ -156,6 +156,6 @@ Creation of the site with a complete stack in JavaScript with Nextjs and React.
 - Run it on port 3000: `npm run dev`
 - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## functionality
+## Functionality
 
 - [x] Build application deployment

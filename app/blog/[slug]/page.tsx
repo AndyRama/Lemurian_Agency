@@ -1,8 +1,14 @@
 import React from "react";
-import { Category, allPosts } from "contentlayer/generated";
+import { allPosts } from "contentlayer/generated";
 import BlogContent from "./BlogContent";
 
+interface Category {
+  title: string;
+}
+
 interface Post {
+  [x: string]: any;
+  title: string;
   date: string;
   author: string;
   categories?: Category[];
@@ -10,16 +16,14 @@ interface Post {
   body: {
     code: string;
   };
-  slug: string;
-  _raw: {
-    flattenedPath: string;
-  };
-  title: string;
-  excerpt?: string;
+}
+
+interface BlogContentProps {
+  post: Post;
 }
 
 export async function generateStaticParams() {
-  const posts = allPosts;
+  const posts = await allPosts;
 
   return posts.map((post) => ({ slug: post.slug }));
 }
@@ -31,7 +35,7 @@ interface GenerateMetadataParams {
 export const generateMetadata = async ({ params }: GenerateMetadataParams) => {
   const posts = allPosts;
   const post = posts.find(
-    (post) => post._raw.flattenedPath === "blog/" + params?.slug,
+    (post) => post._raw.flattenedPath === "blog/" + params.slug,
   );
   return { title: post?.title, excerpt: post?.excerpt };
 };
@@ -40,10 +44,10 @@ interface PageProps {
   params: { slug: string };
 }
 
-const Page: React.FC<PageProps> = ({ params }) => {
+const page: React.FC<PageProps> = ({ params }) => {
   const posts = allPosts as Post[];
   const post = posts.find(
-    (post) => post._raw.flattenedPath === "blog/" + params?.slug,
+    (post) => post._raw.flattenedPath === "blog/" + params.slug,
   );
 
   if (!post) {
@@ -57,4 +61,4 @@ const Page: React.FC<PageProps> = ({ params }) => {
   );
 };
 
-export default Page;
+export default page;

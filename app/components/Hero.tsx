@@ -6,6 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 interface HeroProps {
   className?: string;
+  title?: string;
+  subTitle?: string;
 }
 
 const heroContent = {

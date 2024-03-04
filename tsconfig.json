@@ -40,7 +40,8 @@
     "app/components/Navigation.js",
     "__tests__/components/Navigation.test.tsx",
     "__tests__/pages/page.test.jsx",
-    "contentlayer.config.js"
+    "contentlayer.config.js",
+    "next.config.js"
   ],
   "exclude": [
     "node_modules"

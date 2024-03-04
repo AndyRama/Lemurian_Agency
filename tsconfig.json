@@ -39,7 +39,8 @@
     "__tests__/pages/page.test.js",
     "app/components/Navigation.js",
     "__tests__/components/Navigation.test.tsx",
-    "__tests__/pages/page.test.jsx"
+    "__tests__/pages/page.test.jsx",
+    "contentlayer.config.js"
   ],
   "exclude": [
     "node_modules"

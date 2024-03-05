@@ -96,7 +96,7 @@ const Stats: React.FC<StatsProps> = ({ className }) => {
               )}
 
               {statContent.getStarted.cta.cta_label && (
-                <Link href={statContent.getStarted.cta.cta_href} passHref>
+                <Link href={statContent.getStarted.cta.cta_href}>
                   <Link
                     className="transistion-all duration-300 ease-in-out text-[11.5px]
                     tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5

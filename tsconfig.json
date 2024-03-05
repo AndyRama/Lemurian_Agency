@@ -43,7 +43,8 @@
     "app/components/blog/category/PostCard.jsx",
     "app/components/blog/category/Posts.jsx",
     "app/blog/categories/[slug]/page.jsx",
-    "app/blog/page.jsx"
+    "app/blog/page.jsx",
+    "app/components/RecentBlog.jsx"
   ],
   "exclude": [
     "node_modules"

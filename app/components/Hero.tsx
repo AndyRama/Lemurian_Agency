@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   });
 
   const imgScroll1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
-  const imgScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
+  // const imgScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
 
   return (
     <section className="py-20">

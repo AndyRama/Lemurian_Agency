@@ -11,7 +11,7 @@ export default function Home() {
       <CardDescription className="md:pt-22 lg-pb:80" />
       <Stats />
       <RecentProject className="py-6 lg:py-32" />
-      <RecentBlog />
+      <RecentBlog className="pt-14 pb-15 lg:pb-32" />
     </>
   );
 }

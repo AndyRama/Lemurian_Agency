@@ -47,13 +47,16 @@ const Items = ({ currentItems }) => {
                   </p>
 
                   <h3 className="mb-4">
-                    <Link href={post.url} className="text-lg leading-none">
+                    <Link
+                      href={`/${post.url}`}
+                      className="text-lg leading-none"
+                    >
                       {post.title}
                     </Link>
                   </h3>
                   <p>
                     <Link
-                      href={post.url}
+                      href={`/${post.url}`}
                       className={`text-[12px] tracking-[2px] uppercase
                         pb-2 inline-block  duration-300 transistion-all bg-white-600
                         ease-in-out relative before:content-['']
@@ -175,4 +178,3 @@ const Posts = ({ className, itemsPerPage, archive = false, params }) => {
 };
 
 export default Posts;
-//ok

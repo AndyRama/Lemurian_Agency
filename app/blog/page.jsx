@@ -2,15 +2,11 @@ import React from "react";
 import Hero from "../components/about/Hero";
 import Posts from "../components/blog/category/Posts";
 
-interface Metadata {
-  title: string;
-}
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Blogs - Lemurian by Andy Ramaroson",
 };
 
-const Page: React.FC = () => {
+const page = () => {
   return (
     <>
       <Hero className="pt-52 pb-24" title="Recent Updates" subTitle="My Blog" />
@@ -19,4 +15,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default page;

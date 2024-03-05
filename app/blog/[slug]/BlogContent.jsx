@@ -1,33 +1,15 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { compareDesc, format, parseISO } from "date-fns";
-import PostCard from "./../../components/blog/category/PostCard";
-import { getMDXComponent } from "next-contentlayer/hooks";
+import { motion } from "framer-motion";
 import { allPosts } from "contentlayer/generated";
+import { compareDesc, format, parseISO } from "date-fns";
 
-interface Category {
-  title: string;
-}
+import PostCard from "@/app/components/blog/category/PostCard";
+import { getMDXComponent } from "next-contentlayer/hooks";
 
-interface Post {
-  title: string;
-  date: string;
-  author: string;
-  categories?: Category[];
-  image: string;
-  body: {
-    code: string;
-  };
-}
-
-interface BlogContentProps {
-  post: Post;
-}
-
-function slugify(str: string): string {
+function slugify(str) {
   return str
     .toLowerCase()
     .replace(/[^a-z0-9 -]/g, "")
@@ -35,12 +17,12 @@ function slugify(str: string): string {
     .replace(/-+/g, "-");
 }
 
-const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
+const BlogContent = ({ post }) => {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   );
 
-  let MDXContent: React.ElementType | null = null;
+  let MDXContent;
 
   if (!posts) return null;
 
@@ -56,7 +38,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
       whileInView={{
         opacity: 1,
         y: 0,
-        transition: {
+        transistion: {
           delay: 0.2,
           duration: 0.5,
         },
@@ -66,6 +48,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
     >
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-16 max-w-4xl mx-auto">
+          {/* Content title post */}
           <h1 className="text-slate-900 text-center text-4xl/none lg:text-6xl/none font-medium">
             {post.title}
           </h1>
@@ -86,12 +69,13 @@ const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
                 className="font-medium"
               >
                 {category.title}
-                {index < (post.categories?.length || 0) - 1 ? ` | ` : ``}
+                {index < post.categories.length - 1 ? ` | ` : ``}
               </Link>
             ))}
           </p>
         </div>
 
+        {/* Content Image post */}
         <div className="mb-16">
           <Image
             src={post.image}
@@ -102,13 +86,15 @@ const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
           />
         </div>
 
+        {/* Content Article */}
         <article className="prose mx-auto max-w-2xl">
-          {MDXContent && <MDXContent />}
+          <MDXContent />
         </article>
 
         <div className="max-w-4xl mx-auto mt-20 lg:mt-32">
           <h2 className="text-2xl text-gray-700 mb-10"> More Blogs Posts</h2>
 
+          {/* Card others posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {posts
               .filter((a) => post.title !== a.title)
@@ -118,10 +104,13 @@ const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
               })}
           </div>
 
+          {/* Btn others post */}
           <div className="flex justify-center mt-10">
             <Link
               href="/blog"
-              className="transition-all duration-300 ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase bg-orange-400 hover:text-orange-600 py-4 px-5 text-white hover:bg-white hover:shadown-2xl rounded-md"
+              className="transition-all duration-300 ease-in-out
+              text-[11.5px] tracking-[2px] font-bold uppercase bg-orange-600
+              hover:text-orange-600 py-4 px-5 text-white hover:bg-white hover:shadown-2xl rounded-md"
             >
               View All Blog Posts
             </Link>

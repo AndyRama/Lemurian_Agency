@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-// import Link from "next/link";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -11,7 +10,6 @@ interface CardDescriptionContent {
   };
   content: {
     img: string;
-    title: string;
     description: string;
     description1: string;
   };
@@ -32,12 +30,11 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
 
   const cardDescriptionContent: CardDescriptionContent = {
     heading: {
-      title: "Qui suis-je !",
+      title: "Lemurian Agency, c'est moi !",
       subTitle: "À propos de moi",
     },
     content: {
-      img: "/images/maquette.jpg",
-      title: "Developpeur",
+      img: "/images/andy.png",
       description:
         "Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de mes clients en solution web, en garantissant le respect de leurs règles métiers.",
       description1:
@@ -102,26 +99,8 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
                 />
               </motion.div>
             </div>
-
-            {/* cardDescription - Right - title */}
             <div className="lg:w-6/12">
-              <motion.h3
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.2,
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
-                className="text-2xl mb-7 text-gray-800"
-              >
-                {cardDescriptionContent.content.title}
-              </motion.h3>
-
-              {/* cardDescription - Right - bloc text */}
+              {/* cardDescription - Left - bloc text */}
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{
@@ -133,12 +112,12 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
                   },
                 }}
                 viewport={{ once: true }}
-                className="text-xl mb-7 text-gray-800"
+                className="text-xl mb-7 text-gray-500"
               >
                 {cardDescriptionContent.content.description}
               </motion.p>
 
-              {/* cardDescription - Right - bloc text */}
+              {/* cardDescription - Left - bloc text */}
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{
@@ -150,7 +129,7 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
                   },
                 }}
                 viewport={{ once: true }}
-                className="text-xl mb-7 text-gray-800"
+                className="text-xl mb-7 text-gray-500"
               >
                 {cardDescriptionContent.content.description1}
               </motion.p>

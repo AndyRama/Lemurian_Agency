@@ -13,7 +13,7 @@ const heroContent = {
     subTitle: "Bienvenue",
     title: "Lemurian Agency",
     description:
-      "Je suis Andy Ramaroson, un développeur FullStack JS basée sur Bordeaux (N. Aquitaine, 33) et je réalise tous types de logiciels et d'applications sur mesure en me basant sur des technologies web modernes. Je suis spécialisé sur le langage  JavaScript avec le framework React & NextJs.",
+      "Je suis Andy Ramaroson, un développeur FullStack JS basée sur Bordeaux (N. Aquitaine, 33) et je réalise des applications sur mesure en me basant sur des technologies web modernes. Je suis spécialisé sur le langage  JavaScript avec le framework React & NextJs.",
     btn: {
       href: "https://calendly.com/lemurian-agency/30min",
       label: "Me contacter",
@@ -90,6 +90,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
               </motion.p>
             )}
 
+            {/* Content left - btn */}
             {heroContent.intro.btn.label && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -101,24 +102,12 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                 viewport={{ once: true }}
                 className="btn-container"
               >
-                {/*  Content left - btn left  */}
                 <Link
                   href={heroContent.intro.btn.href}
                   className="transistion-all duration-300 ease-in-out text-[11.5px]
                   tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
                   rounded text-white inline-block hover:bg-white hover:text-orange-400
                   hover:shadow-2xl mb-5 mr-5"
-                >
-                  {heroContent.intro.btn1.label}
-                </Link>
-
-                {/*  Content left - btn Right  */}
-                <Link
-                  href={heroContent.intro.btn1.href}
-                  className="transistion-all duration-300 ease-in-out text-[11.5px]
-                  tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
-                  rounded text-white inline-block hover:bg-white hover:text-orange-400
-                  hover:shadow-2xl mb-5"
                 >
                   {heroContent.intro.btn.label}
                 </Link>

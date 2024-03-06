@@ -1,4 +1,5 @@
-// import Image from "next/image";
+"use client";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BiChevronRight } from "react-icons/bi";
@@ -60,9 +61,9 @@ const statContent: StatContent = {
   },
 };
 
-const Stats: React.FC<StatsProps> = ({ className }) => {
+const Stats: React.FC<StatsProps> = ({}) => {
   return (
-    <section className="pt-24 pb-0 bg-white">
+    <section className="pt-10 pb-0 bg-white">
       <div className="container px-4 mx-auto">
         <div className="lg:flex justify-between items-center space-x-0 ">
           <div className="w-full lg:w-8/12 mb-20 lg:mb-0">
@@ -97,15 +98,14 @@ const Stats: React.FC<StatsProps> = ({ className }) => {
 
               {statContent.getStarted.cta.cta_label && (
                 <Link href={statContent.getStarted.cta.cta_href} passHref>
-                  <Link
+                  <button
                     className="transistion-all duration-300 ease-in-out text-[11.5px]
                     tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
                     rounded text-white inline-block hover:bg-white hover:text-orange-400
                     hover:shadow-2xl mb-5 mr-5"
-                    href={"https://calendly.com/lemurian-agency/30min"}
                   >
                     <span>{statContent.getStarted.cta.cta_label}</span>
-                  </Link>
+                  </button>
                 </Link>
               )}
             </div>

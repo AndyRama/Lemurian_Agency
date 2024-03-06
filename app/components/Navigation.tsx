@@ -65,7 +65,7 @@ export default function Navigation() {
         <div className="container px-4 mx-auto flex items-center justify-between">
           <div>
             <Link href="/" className="text-[22px] text-gray-700 font-bold">
-              Lemurian Agency
+              Andy Ramaroson
               <span className="text-orange-00">.</span>
             </Link>
           </div>
@@ -77,7 +77,7 @@ export default function Navigation() {
                     href={menu.href}
                     className={`relative before:content-['']
                      before:absolute before:bottom-0 before:left-0 before:w-full
-                     before:h-[2px] before:bg-orange-600 before:origin-[100%, 50%]
+                     before:h-[2px] before:bg-orange-400 before:origin-[100%, 50%]
                      before:transistion-all before:duration-300 before:ease-in-out
                      before:scale-x-0 before:scale-y-[1] before:scale-z[1]
                      before:wil-change-transform hover:before:origin-[100%, 0%]
@@ -85,7 +85,7 @@ export default function Navigation() {
                      hover:before:scale-z-[1] text-[12px] tracking-[2px] uppercase
                      font-semibold pb-2 ${
                        newPathname == menu.href
-                         ? "border-orange-600 before:scale-x-[1]"
+                         ? "border-orange-400 before:scale-x-[1]"
                          : " border-transparent"
                      }`}
                   >
@@ -157,7 +157,7 @@ export default function Navigation() {
                                     href={menu.href}
                                     className={`py-2 inline-block relative before:content-['']
                                     before:absolute before:bottom-0 before:left-0 before:w-full
-                                    before:h-[2px] before:bg-orange-600 before:origin-[100%, 50%]
+                                    before:h-[2px] before:bg-orange-400 before:origin-[100%, 50%]
                                     before:transistion-all before:duration-300 before:ease-in-out
                                     before:scale-x-0 before:scale-y-[1] before:scale-z[1]
                                     before:wil-change-transform hover:before:origin-[100%, 0%]
@@ -165,7 +165,7 @@ export default function Navigation() {
                                     hover:before:scale-z-[1] text-[12px] tracking-[2px] uppercase
                                     font-semibold pb-2 ${
                                       newPathname == menu.href
-                                        ? "border-orange-600 before:scale-x-[1]"
+                                        ? "border-orange-400 before:scale-x-[1]"
                                         : " border-transparent"
                                     }`}
                                   >
@@ -181,27 +181,13 @@ export default function Navigation() {
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div>
                           <Link
-                            href="https://calendly.com/lemurian-agency/30min"
-                            target="_blank"
-                            className="block text-center text-[11.5px] tracking-2[2px]
-                            font-bold uppercase bg-orange-300 py-4 px-5 text-white
-                            rounded-md"
-                          >
-                            Me Contacter
-                          </Link>
-                        </div>
-                      </div>
-
-                      <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                        <div>
-                          <Link
                             href="#"
                             target="_blank"
                             className="block text-center text-[11.5px] tracking-2[2px]
-                            font-bold uppercase bg-orange-300 py-4 px-5 text-white
+                            font-bold uppercase bg-orange-400 py-4 px-5 text-white
                             rounded-md"
                           >
-                            Login
+                            Me connecter
                           </Link>
                         </div>
                       </div>

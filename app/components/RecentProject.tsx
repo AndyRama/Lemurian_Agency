@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -25,6 +26,10 @@ interface RecentProjectContent {
   main: {
     title: string;
   };
+  btn: {
+    href: string;
+    label: string;
+  };
   recentProjects: RecentProject[];
 }
 
@@ -40,8 +45,12 @@ interface RecentProject {
 
 const recentProjectContent: RecentProjectContent = {
   heading: {
-    title: "Les Projets",
-    subTitle: "Mes experiences",
+    title: "Réalisations Éffectuées",
+    subTitle: "Mes Expériences",
+  },
+  btn: {
+    href: "/projects",
+    label: "projets",
   },
   main: {
     title: "Les Projets",
@@ -171,12 +180,24 @@ const RecentProject: React.FC<RecentProjectProps> = ({ className }) => {
                     },
                   }}
                   viewport={{ once: true }}
-                  className="text-2xl lg:text-4xl"
+                  className="text-2xl lg:text-4xl mb-10 "
                 >
                   {recentProjectContent.heading.title}
                 </motion.h2>
               )}
             </div>
+          </div>
+          <div>
+            {/*  Content left - btn Right  */}
+            <Link
+              href={recentProjectContent.btn.href}
+              className="transistion-all duration-300 ease-in-out text-[11.5px]
+                      tracking-[2px] font-bold uppercase bg-orange-400 py-2 lg:py-4 px-5
+                      rounded text-white inline-block items-end hover:bg-white hover:text-orange-400
+                      hover:shadow-1xl"
+            >
+              {recentProjectContent.btn.label}
+            </Link>
           </div>
         </div>
 
@@ -203,7 +224,7 @@ const RecentProject: React.FC<RecentProjectProps> = ({ className }) => {
               {recentProjectContent.recentProjects.map(
                 (recentProject, index) => (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="block md:flex overflow-y-visible mt-4 items-stretch bg-white">
+                    <div className="block md:flex overflow-y-visible items-stretch bg-white">
                       <div className="md:w-4/12">
                         <Image
                           src={recentProject.img}
@@ -218,12 +239,12 @@ const RecentProject: React.FC<RecentProjectProps> = ({ className }) => {
                           <h2 className=" text-2xl text-orange-400 block">
                             {recentProject.title}
                           </h2>
-                          <div className="flex space-x-3 text-sm">
+                          <div className="flex space-x-2 text-sm">
                             <span>{recentProject.type}</span>
                             <span>&mdash;</span>
-                            <p className="mb-5">{recentProject.years}</p>
+                            <p className="mb-4">{recentProject.years}</p>
                           </div>
-                          <blockquote className="text-lg mb-5">
+                          <blockquote className="text-lg mb-4 text-gray-500">
                             {recentProject.quote}
                           </blockquote>
                           <p>

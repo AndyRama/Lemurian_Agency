@@ -61,12 +61,12 @@ const Items = ({ currentItems }) => {
                         pb-2 inline-block  duration-300 transistion-all bg-white-600
                         ease-in-out relative before:content-['']
                         before:absolute before:bottom-0 before:left-0 before:w-full
-                        before:h-[2px] before:bg-orange-600 before:origin-[100%, 50%]
+                        before:h-[2px] before:bg-orange-400 before:origin-[100%, 50%]
                         before:transistion-all before:duration-300 before:ease-in-out
                         before:scale-x-0 before:scale-y-[1] before:scale-z[1]
                         before:wil-change-transform hover:before:origin-[100%, 0%]
                         hover:before:scale-x-[1] hover:before:scale-y-[1]
-                        hover:before:scale-z-[1]`}
+                        hover:before:scale-z-[1]p-2`}
                     >
                       Read More
                     </Link>

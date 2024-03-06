@@ -33,7 +33,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   });
 
   const imgScroll1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
-  // const imgScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
 
   return (
     <section className="py-20">
@@ -102,24 +101,24 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                 viewport={{ once: true }}
                 className="btn-container"
               >
-                {/* btn - left  */}
+                {/*  Content left - btn left  */}
                 <Link
                   href={heroContent.intro.btn.href}
                   className="transistion-all duration-300 ease-in-out text-[11.5px]
-                    tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
-                    rounded text-white inline-block hover:bg-white hover:text-orange-400
-                    hover:shadow-2xl mb-5 mr-5"
+                  tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
+                  rounded text-white inline-block hover:bg-white hover:text-orange-400
+                  hover:shadow-2xl mb-5 mr-5"
                 >
                   {heroContent.intro.btn1.label}
                 </Link>
 
-                {/* btn - right  */}
+                {/*  Content left - btn Right  */}
                 <Link
                   href={heroContent.intro.btn1.href}
                   className="transistion-all duration-300 ease-in-out text-[11.5px]
-                    tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
-                    rounded text-white inline-block hover:bg-white hover:text-orange-400
-                    hover:shadow-2xl mb-5"
+                  tracking-[2px] font-bold uppercase bg-orange-400 py-4 px-5
+                  rounded text-white inline-block hover:bg-white hover:text-orange-400
+                  hover:shadow-2xl mb-5"
                 >
                   {heroContent.intro.btn.label}
                 </Link>
@@ -128,7 +127,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           </div>
 
           {/* Image right */}
-
           <div className="lg:w-12/12 relative lg:-mt-140 mb-8 ">
             <motion.div
               initial={{ opacity: 0, x: 20 }}

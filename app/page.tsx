@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero className="pt-32 md:pt-22 pb-32 lg-pb:10" />
-      <RecentProject className="pt-22" />
+      <RecentProject className="mt-28 pt-22" />
       <Stats />
       <CardDescription className="pt-14" />
       <HowIWork className="py-32 !pt-32 lg:py-32" />

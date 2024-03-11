@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 describe("Navigation content", () => {
   test("display a title navbar", () => {
     render(<Navigation />);
-    const LinkElement = screen.getByText(/Lemurian Agency/i);
+    const LinkElement = screen.getByText(/Andy Ramaroson/i);
     expect(LinkElement).toBeInTheDocument();
   });
 

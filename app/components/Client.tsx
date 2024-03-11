@@ -2,12 +2,12 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
-import logo1 from "./../../public/images/logo.jpg";
-import logo2 from "./../../public/images/logo.jpg";
-import logo3 from "./../../public/images/logo.jpg";
-import logo4 from "./../../public/images/logo.jpg";
-import logo5 from "./../../public/images/logo.jpg";
-import logo6 from "./../../public/images/logo.jpg";
+import logo1 from "./../../public/images/logo1.png";
+import logo2 from "./../../public/images/logo2.png";
+import logo3 from "./../../public/images/logo3.png";
+import logo4 from "./../../public/images/logo4.jpg";
+import logo5 from "./../../public/images/logo5.jpg";
+import logo6 from "./../../public/images/logo6.png";
 
 interface ClientProps {
   className?: string;
@@ -31,12 +31,6 @@ const clientContent = {
 };
 
 const Client: React.FC<ClientProps> = ({ className }) => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
   let id = 0;
 
   return (
@@ -101,13 +95,14 @@ const Client: React.FC<ClientProps> = ({ className }) => {
                 viewport={{ once: true }}
                 key={logo.id}
                 whileHover={{ y: -10, transition: { duration: 0.01 } }}
-                className="z-[2] relative bg-cover bg-center group duration-300"
+                className="z-[2] relative bg-cover bg-center"
               >
                 <Image
                   src={logo.logo}
                   width={90}
                   height={90}
                   alt={`logo${logo.id}`}
+                  className=" rounded-full"
                 />
               </motion.div>
             );

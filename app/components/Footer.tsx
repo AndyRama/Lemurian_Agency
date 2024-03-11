@@ -2,6 +2,8 @@
 import React from "react";
 import { BiSolidHeart } from "react-icons/bi";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import logo from "./../../public/images/logo4.jpg";
 
 interface FooterLink {
   href: string;
@@ -24,22 +26,25 @@ const footerContent: FooterContent = {
       heading: "Product",
       links: [
         {
-          href: "/pricing",
-          label: "Pack Trainnig Atheler",
+          href: "#",
+          label: "I.A",
           badge: "New",
         },
         {
-          href: "/pricing",
-          label: "Pack Starter",
-          badge: "Promo",
+          href: "#",
+          label: "Création",
         },
         {
-          href: "/pricing",
-          label: "Pack Elite Premium",
+          href: "#",
+          label: "Herbergement",
         },
         {
           href: "/princing",
-          label: "Pack Nutrition",
+          label: "Réferencement",
+        },
+        {
+          href: "/princing",
+          label: "Consulting",
         },
       ],
     },
@@ -55,8 +60,8 @@ const footerContent: FooterContent = {
           label: "Projects",
         },
         {
-          href: "/pricing",
-          label: "Princing",
+          href: "/blog",
+          label: "Blog",
         },
         {
           href: "/about",
@@ -72,13 +77,18 @@ const footerContent: FooterContent = {
       heading: "Ressources",
       links: [
         {
-          href: "/blog",
-          label: "Blog",
+          href: "#",
+          label: "Malt",
+          badge: "New",
         },
         {
           href: "#",
-          label: "Unlcoaching.app",
-          badge: "PlayStore",
+          label: "Linkedin",
+        },
+        {
+          href: "#",
+          label: "Portfolio",
+          badge: "Archive",
         },
         {
           href: "#",
@@ -117,18 +127,34 @@ const Footer: React.FC<{ className: string }> = ({ className }) => (
   <footer className={`${className} overflow-hidden w-full h-full relative`}>
     <div className="container mx-auto px-4 z-20 relative">
       <div className="md:flex">
-        <div className="md:w-4/12 mb-10 md:mb-0">
-          <Link href="#" className="text-[22px] text-gray-800 font-bold">
-            Lemurian
+        <div className="md:w-4/12 mb-10 md:mb-0 flex flex-row ">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.2,
+                duration: 0.2,
+              },
+            }}
+            viewport={{ once: true }}
+            whileHover={{ y: -10, transition: { duration: 0.01 } }}
+            className="z-[2] relative bg-cover bg-center"
+          >
+            <img src="/images/logo4.jpg" width={50} height={50} alt={`logo`} />
+          </motion.div>
+          <Link href="#" className="text-[22px] text-gray-800 font-bold mt-3">
+            Lemurian Agency
             <span className="text-orange-400">.</span>
           </Link>
         </div>
 
-        <div className="md:w-8/12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="md:w-8/12 w-12/12">
+          <div className="grid grid-cols-3 md:grid-cols-3">
             {footerContent.footerLinks.map((section, sectionIndex) => (
               <div className="mb-10 md:mb-0" key={section.heading}>
-                <h3 className="text-gray-800 mb-3 md:mb-3">
+                <h3 className="text-gray-800 mb-3 mt-6 md:mb-3">
                   {section.heading}
                 </h3>
                 <ul className="list-none">
@@ -138,7 +164,7 @@ const Footer: React.FC<{ className: string }> = ({ className }) => (
                         suppressHydrationWarning={true}
                         href={link.href}
                         className={`${
-                          link.badge ? "flex gap-2 items-center" : ""
+                          link.badge ? "flex gap-3 items-center" : ""
                         }
                           text-gray-500 duration-300 transition-all ease-in-out hover:text-orange-400`}
                       >

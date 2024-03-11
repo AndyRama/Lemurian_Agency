@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   const imgScroll1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
 
   return (
-    <section className="py-20">
+    <section className={`${className}`}>
       <div className="container px-4 mx-auto ">
         <div className="lg:flex items-center justify-between">
           {/* Content left - subtitle */}

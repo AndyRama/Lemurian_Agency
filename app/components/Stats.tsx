@@ -61,9 +61,10 @@ const statContent: StatContent = {
   },
 };
 
-const Stats: React.FC<StatsProps> = ({}) => {
+const Stats: React.FC<StatsProps> = ({ className }) => {
   return (
-    <section className="pt-10 pb-0 bg-white">
+    // <section className="">
+    <section className={`${className} overflow-hidden`}>
       <div className="container px-4 mx-auto">
         <div className="lg:flex justify-between items-center space-x-0 ">
           <div className="w-full lg:w-8/12 mb-20 lg:mb-0">

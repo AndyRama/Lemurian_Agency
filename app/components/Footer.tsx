@@ -158,7 +158,7 @@ const Footer: React.FC<{ className: string }> = ({ className }) => (
           <div className="grid grid-cols-3 md:grid-cols-3">
             {footerContent.footerLinks.map((section, sectionIndex) => (
               <div className="mb-10 md:mb-0" key={section.heading}>
-                <h3 className="text-gray-800 mb-3 mt-6 md:mb-3">
+                <h3 className="mb-3 mt-6 md:mb-3 text-orange-400 text-bold-500">
                   {section.heading}
                 </h3>
                 <ul className="list-none">

@@ -1,6 +1,8 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import RecentProject from "@/app/components/RecentProject";
+const React = require("react");
+const { render, fireEvent } = require("@testing-library/react");
+const RecentProject = require("@/app/components/RecentProject").default;
+
+jest.mock("swiper/css"); // Ignore Swiper CSS
 
 // Test de rendu initial
 test("renders RecentProject component", () => {

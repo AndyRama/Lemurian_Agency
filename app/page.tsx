@@ -5,6 +5,7 @@ import RecentProject from "./components/RecentProject";
 import Stats from "./components/Stats";
 import RecentBlog from "./components/RecentBlog";
 import HowIWork from "./components/HowIWork";
+import Subscribes from "./components/Subscribes";
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
       <Client className="mt-28 pt-22" />
       <CardDescription className="pt-14" />
       <HowIWork className="py-32 !pt-32 lg:py-32" />
-      <Stats className="pt-10 pb-0 bg-white" />
+      <Stats className="pt-20 pb-20 bg-white" />
       <RecentBlog className="pt-14 pb-15 lg:pb-32" />
+      <Subscribes className="py-16 pt-64 -mt-48 lg:py-32 bg-orange-300" />
     </>
   );
 }

@@ -8,19 +8,14 @@ import Image from "next/image";
 
 const recentBlogContent = {
   heading: {
-    title: "Recent Update",
-    subTitle: "Our Blog",
+    title: "Article récents",
+    subTitle: "Blog/Actualité",
     description:
       "Nous nous spécialisons dans la création d'applications web sur-mesure, destinées à optimiser le quotidien de nos clients.",
   },
 };
 const PostCard = ({ index, post }) => {
   index *= 0.05;
-
-  // const isClient = useIsClient();
-  // if (!isClient) {
-  //   return "Loading...";
-  // }
 
   return (
     <motion.div
@@ -159,11 +154,3 @@ const RecentBlog = ({ className }) => {
 };
 
 export default RecentBlog;
-
-// const useIsClient = () => {
-//   const [isClient, setIsClient] = useState(false);
-//   useEffect(() => {
-//     setIsClient(true);
-//   }, []);
-//   return isClient;
-// };

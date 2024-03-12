@@ -23,7 +23,7 @@ export default function RootLayout({
         <Navigation />
         {children}
       </body>
-      <Footer className={""} />
+      <Footer className="mt-10" />
     </html>
   );
 }

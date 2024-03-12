@@ -189,6 +189,16 @@ const RecentProject: React.FC<RecentProjectProps> = ({ className }) => {
           </div>
           <div>
             {/*  Content left - btn Right  */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.2, duration: 0.5 },
+                }}
+                viewport={{ once: true }}
+                className="btn-container"
+              >
             <Link
               href={recentProjectContent.btn.href}
               className="transistion-all duration-300 ease-in-out text-[11.5px]
@@ -198,6 +208,7 @@ const RecentProject: React.FC<RecentProjectProps> = ({ className }) => {
             >
               {recentProjectContent.btn.label}
             </Link>
+            </motion.div>
           </div>
         </div>
 

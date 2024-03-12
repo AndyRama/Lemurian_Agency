@@ -26,7 +26,7 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
     offset: ["start end", "end start"],
   });
 
-  const img1 = useTransform(scrollYProgress, [0, 1], ["20%", "-10%"]);
+  const imgScroll1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
 
   const cardDescriptionContent: CardDescriptionContent = {
     heading: {
@@ -89,7 +89,20 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ className }) => {
         <div className="lg: flex justify-center">
           <div className="lg:w-8/12 lg:flex gap-20 items-center">
             <div className="mb-7 lg:mb-0 lg:w-6/12 lg:order-2 relative">
-              <motion.div style={{ y: img1 }} className="z-[2] relative">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    delai: 0.4,
+                    duration: 0.5,
+                  },
+                }}
+                viewport={{ once: true }}
+                style={{ y: imgScroll1 }}
+                className="z-[2] relative bg-cover bg-center"
+              >
                 <Image
                   src={cardDescriptionContent.content.img}
                   className="object-cover !w-full !h-[400] lg:max-w-2xl object-center"

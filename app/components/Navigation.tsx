@@ -5,6 +5,8 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { HiMenu } from "react-icons/hi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import logo from "./../../public/images/logo4.jpg";
 
 const navigationMenu = [
   { href: "/", label: "Home" },
@@ -63,7 +65,16 @@ export default function Navigation() {
     <div>
       <header role="banner" className="py-10 absolute w-full z-[3]">
         <div className="container px-4 mx-auto flex items-center justify-between">
-          <div>
+          <div className="flex flex-row items-center justify-between ">
+         
+              <img
+                src="/images/logo4.jpg"
+                className="rounded-full"
+                width={50}
+                height={50}
+                alt={`logo`}
+              />
+
             <Link href="/" className="text-[22px] text-gray-700 font-bold">
               Andy Ramaroson
               <span className="text-orange-00">.</span>

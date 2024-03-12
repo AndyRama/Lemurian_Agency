@@ -23,32 +23,6 @@ interface FooterContent {
 const footerContent: FooterContent = {
   footerLinks: [
     {
-      heading: "Product",
-      links: [
-        {
-          href: "#",
-          label: "I.A",
-          badge: "New",
-        },
-        {
-          href: "#",
-          label: "Création",
-        },
-        {
-          href: "#",
-          label: "Herbergement",
-        },
-        {
-          href: "/princing",
-          label: "Réferencement",
-        },
-        {
-          href: "/princing",
-          label: "Consulting",
-        },
-      ],
-    },
-    {
       heading: "Company",
       links: [
         {
@@ -71,6 +45,10 @@ const footerContent: FooterContent = {
           href: "/contact",
           label: "Contact",
         },
+        {
+          href: "/princing",
+          label: "Princing",
+        },
       ],
     },
     {
@@ -88,11 +66,29 @@ const footerContent: FooterContent = {
         {
           href: "#",
           label: "Portfolio",
-          badge: "Archive",
+          // badge: "Archive",
+        },
+      ],
+    },
+    {
+      heading: "Product",
+      links: [
+        {
+          href: "#",
+          label: "I.A",
+          badge: "New",
         },
         {
           href: "#",
-          label: "Support",
+          label: "Création",
+        },
+        {
+          href: "/princing",
+          label: "Réferencement",
+        },
+        {
+          href: "#",
+          label: "Herbergement",
         },
       ],
     },
@@ -127,30 +123,38 @@ const Footer: React.FC<{ className: string }> = ({ className }) => (
   <footer className={`${className} overflow-hidden w-full h-full relative`}>
     <div className="container mx-auto px-4 z-20 relative">
       <div className="md:flex">
-        <div className="md:w-4/12 mb-10 md:mb-0 flex flex-row ">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                delay: 0.2,
-                duration: 0.2,
-              },
-            }}
-            viewport={{ once: true }}
-            whileHover={{ y: -10, transition: { duration: 0.01 } }}
-            className="z-[2] relative bg-cover bg-center"
-          >
-            <img src="/images/logo4.jpg" width={50} height={50} alt={`logo`} />
-          </motion.div>
+        <div className="md:w-4/12 mb-10 md:mb-0 flex flex-row">
+          <div className="items-center justify-between">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 0.2,
+                  duration: 0.2,
+                },
+              }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, transition: { duration: 0.01 } }}
+              className="z-[2] relative bg-cover bg-center"
+            >
+              <img
+                src="/images/logo4.jpg"
+                className="rounded-full"
+                width={50}
+                height={50}
+                alt={`logo`}
+              />
+            </motion.div>
+          </div>
           <Link href="#" className="text-[22px] text-gray-800 font-bold mt-3">
             Lemurian Agency
             <span className="text-orange-400">.</span>
           </Link>
         </div>
 
-        <div className="md:w-8/12 w-12/12">
+        <div className="md:w-8/12">
           <div className="grid grid-cols-3 md:grid-cols-3">
             {footerContent.footerLinks.map((section, sectionIndex) => (
               <div className="mb-10 md:mb-0" key={section.heading}>
